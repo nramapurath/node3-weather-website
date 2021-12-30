@@ -8,6 +8,7 @@ const app = express()
 const options = {
     extensions: ['html', 'htm']
 }
+const port = process.env.PORT || 3000 // run on supplied port or fallback to 3000 if local
 
 // Define paths for Express config
 const publicDirectoryPath = path.join(__dirname, '../public')
@@ -106,6 +107,6 @@ app.get('*', (req, res) => {
     })
 })
 
-app.listen(3000, () => {
-    console.log('Server up on port 3000.')
+app.listen(port, () => {
+    console.log('Server up on port ' + port)
 })
