@@ -68,14 +68,6 @@ app.get('/weather', (req, res) => {
             })
         })
     }
-    
-
-    
-    // res.send({
-    //     forecast: 'Clear',
-    //     location: 'Boston',
-    //     address: req.query.address
-    // })
 })
 
 app.get('/products', (req, res) => {
